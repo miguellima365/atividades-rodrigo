@@ -1,0 +1,53 @@
+/**
+ * You can edit, run, and share this code.
+ * play.kotlinlang.org
+ */
+fun main() {
+    println("Hello, world!!!")
+}
+
+
+fun main() {
+    print("Informe seu nome: ")
+    val nome = readLine() ?: ""
+    
+    print("Informe sua idade: ")
+    val idade = readLine()?.toIntOrNull() ?: 0
+    
+    println("Olá, $nome! Você tem $idade anos.")
+}
+
+
+
+fun main() {
+    print("Informe sua idade: ")
+    val entrada = readLine()?.toIntOrNull() ?: 0
+
+    if (entrada in 0..12) {
+        println("Você é uma criança.")
+    } else if (entrada in 13..18) {
+        println("Você é um adolescente.")
+    } else {
+        println("Você é um adulto.")
+    }
+}
+
+
+
+fun classificarIdade(idade: Int): String {
+    return if (idade in 0..12) {
+        "Você é uma criança."
+    } else if (idade in 13..18) {
+        "Você é um adolescente."
+    } else {
+        "Você é um adulto."
+    }
+}
+
+fun main() {
+    print("Informe sua idade: ")
+    val idadeInformada = readLine()?.toIntOrNull() ?: 0
+    
+    val resultado = classificarIdade(idadeInformada)
+    println(resultado)
+}
